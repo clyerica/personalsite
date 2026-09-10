@@ -3,3 +3,24 @@
   padding-top: 0.2rem !important;
   padding-bottom: 0.2rem !important;
 }
+/* Style the Quarto page footer */
+footer.nav-footer {
+  background-color: #adb5bd; /* Dark charcoal/slate background */
+  color: #f8f9fa;            /* Light text for high contrast */
+  padding: 2rem 1.5rem;      /* Generous vertical and horizontal breathing room *//
+}
+
+/* Ensure footer links and icons match the text color */
+footer.nav-footer a,
+footer.nav-footer .nav-footer-right a {
+  color: lightgrey !important ;           /* Soft light grey */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Hover effect for footer links and icons */
+footer.nav-footer a:hover,
+footer.nav-footer .nav-footer-right a:hover {
+  color: #ffffff;            /* Bright white on hover */
+  text-decoration: underline;
+}

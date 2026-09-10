@@ -25,10 +25,10 @@ p{
 
 ### Education
 
-**Singapore Management University** \| Singapore\
+**Singapore Management University** \| Singapore \| Jan 2025 - July 2026\
 Master of IT in Business - Data Science and Analytics
 
-**Durham University** \| United Kingdom\
+**Durham University** \| United Kingdom \| Sept 2018 - Jun 2021\
 Bachelor of Arts in Combined Social Sciences - Specialising in International Relations and Economics
 
 ### Experience
@@ -43,6 +43,7 @@ Bachelor of Arts in Combined Social Sciences - Specialising in International Rel
 Python {{< fa star >}} {{< fa star >}} {{< fa star >}}\
 R {{< fa star >}} {{< fa star >}} {{< fa star >}}\
 Tableau {{< fa star >}} {{< fa star >}} {{< fa star >}}\
+Excel {{< fa star >}} {{< fa star >}} {{< fa star >}}\
 SQL {{< fa star >}} {{< fa star >}}\
 SAS Viya {{< fa star >}}
 :::

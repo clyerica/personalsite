@@ -10,7 +10,7 @@ listing:
       image: "https://live.staticflickr.com/217/454974895_4c3266beab_b.jpg"
       categories: [Geospatial Analysis, Predictive Analysis, R, Machine Learning]
     - title: "Financial Data Dashboard"
-      description: "An interactive data visualisation dashboard developed using RShiny, exploring transaction data of a fintech company. Project work for ISSS608 Visual Analytics and Applications"
+      description: "An interactive data visualisation dashboard developed using RShiny, exploring transaction data onetff a fintech company. Project work for ISSS608 Visual Analytics and Applications"
       path: "https://chunhanyang.shinyapps.io/colombian-fintech-dashboard/"
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIuZKDtopvS9icmU47iZ2M-uu6dR_JH8oTkRrDDauFos2SpSth6_0Y2tM&s=10"
       categories: [Time-series Analysis, Predictive Analysis, R, Machine Learning]

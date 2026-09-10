@@ -9,9 +9,22 @@ website:
         text: Home
       - href: about.qmd
         text: About me
-      - blog.qmd
+      # - blog.qmd
       - projects.qmd
       - gallery.qmd
+    right:
+      - icon: envelope-fill
+        href: mailto:ericalychan@gmail.com
+        aria-label: "Email"
+      - icon: github
+        href: https://github.com/clyerica
+        aria-label: "GitHub"
+      - icon: linkedin
+        href: https://linkedin.com/in/erica-chan-6565b9218/
+        aria-label: "LinkedIn"
+  page-footer: 
+    center: Have a question or want to connect? [Reach out via email](mailto:ericalychan@gmail.com)
+    
       
 
 format:
