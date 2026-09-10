@@ -2,8 +2,6 @@
 title: "More about me"
 ---
 
-About this site
+to add CV details
 
-```{r}
-1 + 1
-```
+g
