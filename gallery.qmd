@@ -1,0 +1,17 @@
+---
+title: "Gallery"
+format: html
+lightbox: 
+  match: auto
+  loop: true
+---
+::: {layout-ncol=3 layout-valign="center"}
+
+![](gallery/outfits.png){group="g"}
+
+![](gallery/yen.png){group="g"}
+
+![](gallery/sp2.png){group="g"}
+
+![](gallery/sp3.png){group="g"}
+:::

@@ -1,0 +1,33 @@
+---
+title: "Projects"
+description: "A collection of my personal data analytics work"
+listing:
+  contents: 
+    - "project_work/*.qmd"
+    - title: "HDB Resale Price Prediction"
+      description: "Details the step-by-step process from data gathering, cleaning, model training, and assessment to compare performance of geographically weighted models to predict resale prices."
+      path: "https://isss626gaa.netlify.app/take-home_ex/take-home_ex03/take-home_ex03"
+      image: "https://live.staticflickr.com/217/454974895_4c3266beab_b.jpg"
+      categories: [Geospatial Analysis, Predictive Analysis, R, Machine Learning]
+    - title: "Financial Data Dashboard"
+      description: "An interactive data visualisation dashboard developed using RShiny, exploring transaction data of a fintech company. Project work for ISSS608 Visual Analytics and Applications"
+      path: "https://chunhanyang.shinyapps.io/colombian-fintech-dashboard/"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIuZKDtopvS9icmU47iZ2M-uu6dR_JH8oTkRrDDauFos2SpSth6_0Y2tM&s=10"
+      categories: [Time-series Analysis, Predictive Analysis, R, Machine Learning]
+  type: grid             
+  categories: true         
+---
+```{=html}
+<style>
+.quarto-grid-item .listing-description,
+.quarto-grid-item .card-text {
+  font-size: 0.85rem;           
+  line-height: 1.35;
+  -webkit-line-clamp: 8;
+  overflow: visible;
+}
+.quarto-grid-item .listing-categories .listing-category {
+  font-size: 0.6rem;      /* Default is ~0.8rem; adjust to your preference */
+  padding: 0.15em 0.5em;  /* Reduce padding so multiple pills fit better */
+}
+</style>

@@ -1,7 +1,48 @@
 ---
-title: "More about me"
+image: images/clipboard-2076039297.jpeg
+format: html
+title: Erica Chan
+about: 
+  template: trestles
+  image-shape: round
 ---
 
-to add CV details
+```{=html}
+<style>
+#quarto-document-content, 
+.about-contents, 
+.about-entity {
+  font-size: 0.8em;
+}
+p{
+  margin-bottom: 0.5em;
+}
+</style>
+```
 
-g
+::: {#hero-heading}
+*Aspiring data analyst* *with hands-on experience across the full analytics workflow — from data wrangling and statistical modeling to interactive visualization.*
+
+### Education
+
+**Singapore Management University** \| Singapore\
+Master of IT in Business - Data Science and Analytics
+
+**Durham University** \| United Kingdom\
+Bachelor of Arts in Combined Social Sciences - Specialising in International Relations and Economics
+
+### Experience
+
+**Ministry of Foreign Affairs - Foreign Service Officer** \| Jun 2022 - Dec 2024
+
+- Analysed and reported in real time on geopolitical developments of 8 countries in Eastern Europe (2022-2023) and India (2024)
+- Facilitated bilateral cooperation between foreign embassies/institutions and local government agencies such as negotiations of Memorandums of Understanding, events planning, and humanitarian donations.
+
+### Skills
+
+Python {{< fa star >}} {{< fa star >}} {{< fa star >}}\
+R {{< fa star >}} {{< fa star >}} {{< fa star >}}\
+Tableau {{< fa star >}} {{< fa star >}} {{< fa star >}}\
+SQL {{< fa star >}} {{< fa star >}}\
+SAS Viya {{< fa star >}}
+:::

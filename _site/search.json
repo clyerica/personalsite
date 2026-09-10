@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Hi there!",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
     "section": "",
-    "text": "I’m Erica, a multidisciplinarian who loves tinkering with all kinds of things - art, data or code. I enjoy learning widely, allowing me to connect the dots over various disciplines\n\nHead over to Projects to see my data analytics dashboards, coding builds and process.\nVisit Musings for my writing on current trends and affairs, curious rabbit holes, and lessons learned along the way.\n\nHave a look around and thank you for visiting!"
+    "text": "HDB Resale Price Prediction\n\n\n\nGeospatial Analysis\n\nPredictive Analysis\n\nR\n\nMachine Learning\n\n\n\nDetails the step-by-step process from data gathering, cleaning, model training, and assessment to compare performance of geographically weighted models to predict resale…\n\n\n\n\n\n\n\n\n\n\n\n\nFinancial Data Dashboard\n\n\n\nTime-series Analysis\n\nPredictive Analysis\n\nR\n\nMachine Learning\n\n\n\nAn interactive data visualisation dashboard developed using RShiny, exploring transaction data of a fintech company. Project work for ISSS608 Visual Analytics and…\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "More about me",
+    "title": "Erica Chan",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Aspiring data analyst with hands-on experience across the full analytics workflow — from data wrangling and statistical modeling to interactive visualization.\n\nEducation\nSingapore Management University | Singapore\nMaster of IT in Business - Data Science and Analytics\nDurham University | United Kingdom\nBachelor of Arts in Combined Social Sciences - Specialising in International Relations and Economics\n\n\nExperience\nMinistry of Foreign Affairs - Foreign Service Officer | Jun 2022 - Dec 2024\n\nAnalysed and reported in real time on geopolitical developments of 8 countries in Eastern Europe (2022-2023) and India (2024)\nFacilitated bilateral cooperation between foreign embassies/institutions and local government agencies such as negotiations of Memorandums of Understanding, events planning, and humanitarian donations.\n\n\n\nSkills\nPython   \nR   \nTableau   \nSQL  \nSAS Viya"
   },
   {
     "objectID": "blog.html",
@@ -19,5 +19,12 @@
     "title": "Musings",
     "section": "",
     "text": "No matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hi there!",
+    "section": "",
+    "text": "I’m Erica, a multidisciplinarian who loves tinkering with all kinds of things - art, data and code. I enjoy learning widely, allowing me to connect the dots over various disciplines. This website is still under construction!\n\nHead over to Projects to see my data analytics dashboards, coding builds and process.\nVisit Musings for my writing on current trends and affairs, curious rabbit holes, and lessons learned along the way.\nGallery includes some of my recent art, either personal or commissioned!\n\nHave a look around and thank you for visiting!"
   }
 ]

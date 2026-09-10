@@ -4,15 +4,17 @@ title: "Hi there!"
 
 ::::: grid
 ::: g-col-4
-![](images/clipboard-2076039297.jpeg)
+![](images/clipboard-1634880225.jpeg)
 :::
 
 ::: g-col-8
-I'm Erica, a multidisciplinarian who loves tinkering with all kinds of things - art, data or code. I enjoy learning widely, allowing me to connect the dots over various disciplines
+I'm Erica, a multidisciplinarian who loves tinkering with all kinds of things - art, data and code. I enjoy learning widely, allowing me to connect the dots over various disciplines. This website is still under construction!
 
 - Head over to **Projects** to see my data analytics dashboards, coding builds and process.
 
 - Visit **Musings** for my writing on current trends and affairs, curious rabbit holes, and lessons learned along the way.
+
+- **Gallery** includes some of my recent art, either personal or commissioned!
 
 Have a look around and thank you for visiting!
 :::

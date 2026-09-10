@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hi there!</title>
+<title>Gallery</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,6 +40,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-f9e6e4d29af3f5f6ee06eaf03ed5edd8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -85,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -101,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./gallery.html"> 
+    <a class="nav-link active" href="./gallery.html" aria-current="page"> 
 <span class="menu-text">Gallery</span></a>
   </li>  
 </ul>
@@ -123,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Hi there!</h1>
+<h1 class="title">Gallery</h1>
 </div>
 
 
@@ -140,18 +143,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="grid">
-<div class="g-col-4">
-<p><img src="images/clipboard-1634880225.jpeg" class="img-fluid"></p>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="gallery/outfits.png" class="lightbox" data-gallery="g"><img src="gallery/outfits.png" class="img-fluid"></a></p>
 </div>
-<div class="g-col-8">
-<p>I’m Erica, a multidisciplinarian who loves tinkering with all kinds of things - art, data and code. I enjoy learning widely, allowing me to connect the dots over various disciplines. This website is still under construction!</p>
-<ul>
-<li><p>Head over to <strong>Projects</strong> to see my data analytics dashboards, coding builds and process.</p></li>
-<li><p>Visit <strong>Musings</strong> for my writing on current trends and affairs, curious rabbit holes, and lessons learned along the way.</p></li>
-<li><p><strong>Gallery</strong> includes some of my recent art, either personal or commissioned!</p></li>
-</ul>
-<p>Have a look around and thank you for visiting!</p>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="gallery/yen.png" class="lightbox" data-gallery="g"><img src="gallery/yen.png" class="img-fluid"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="gallery/sp2.png" class="lightbox" data-gallery="g"><img src="gallery/sp2.png" class="img-fluid"></a></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><a href="gallery/sp3.png" class="lightbox" data-gallery="g"><img src="gallery/sp3.png" class="img-fluid"></a></p>
+</div>
 </div>
 </div>
 
@@ -558,6 +565,38 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":true,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

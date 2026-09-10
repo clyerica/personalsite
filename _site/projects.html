@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="A collection of my personal data analytics work">
 
-<title>Hi there!</title>
+<title>Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -67,7 +70,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-image','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-image","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -85,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -97,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Musings</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link active" href="./projects.html" aria-current="page"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -115,17 +176,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R2Vvc3BhdGlhbCUyMEFuYWx5c2lz">Geospatial Analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWFjaGluZSUyMExlYXJuaW5n">Machine Learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UHJlZGljdGl2ZSUyMEFuYWx5c2lz">Predictive Analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VGltZS1zZXJpZXMlMjBBbmFseXNpcw==">Time-series Analysis <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Hi there!</h1>
+<h1 class="title">Projects</h1>
 </div>
 
+<div>
+  <div class="description">
+    A collection of my personal data analytics work
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -140,24 +206,82 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="grid">
-<div class="g-col-4">
-<p><img src="images/clipboard-1634880225.jpeg" class="img-fluid"></p>
-</div>
-<div class="g-col-8">
-<p>I’m Erica, a multidisciplinarian who loves tinkering with all kinds of things - art, data and code. I enjoy learning widely, allowing me to connect the dots over various disciplines. This website is still under construction!</p>
-<ul>
-<li><p>Head over to <strong>Projects</strong> to see my data analytics dashboards, coding builds and process.</p></li>
-<li><p>Visit <strong>Musings</strong> for my writing on current trends and affairs, curious rabbit holes, and lessons learned along the way.</p></li>
-<li><p><strong>Gallery</strong> includes some of my recent art, either personal or commissioned!</p></li>
-</ul>
-<p>Have a look around and thank you for visiting!</p>
-</div>
-</div>
+<style>
+.quarto-grid-item .listing-description,
+.quarto-grid-item .card-text {
+  font-size: 0.85rem;           
+  line-height: 1.35;
+  -webkit-line-clamp: 8;
+  overflow: visible;
+}
+.quarto-grid-item .listing-categories .listing-category {
+  font-size: 0.6rem;      /* Default is ~0.8rem; adjust to your preference */
+  padding: 0.15em 0.5em;  /* Reduce padding so multiple pills fit better */
+}
+</style>
 
 
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="R2Vvc3BhdGlhbCUyMEFuYWx5c2lzJTJDUHJlZGljdGl2ZSUyMEFuYWx5c2lzJTJDUiUyQ01hY2hpbmUlMjBMZWFybmluZw==">
+<a href="https://isss626gaa.netlify.app/take-home_ex/take-home_ex03/take-home_ex03" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://live.staticflickr.com/217/454974895_4c3266beab_b.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+HDB Resale Price Prediction
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('R2Vvc3BhdGlhbCUyMEFuYWx5c2lz'); return false;">Geospatial Analysis</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHJlZGljdGl2ZSUyMEFuYWx5c2lz'); return false;">Predictive Analysis</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>Details the step-by-step process from data gathering, cleaning, model training, and assessment to compare performance of geographically weighted models to predict resale…</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="VGltZS1zZXJpZXMlMjBBbmFseXNpcyUyQ1ByZWRpY3RpdmUlMjBBbmFseXNpcyUyQ1IlMkNNYWNoaW5lJTIwTGVhcm5pbmc=">
+<a href="https://chunhanyang.shinyapps.io/colombian-fintech-dashboard/" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIuZKDtopvS9icmU47iZ2M-uu6dR_JH8oTkRrDDauFos2SpSth6_0Y2tM&amp;s=10" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Financial Data Dashboard
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('VGltZS1zZXJpZXMlMjBBbmFseXNpcw=='); return false;">Time-series Analysis</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHJlZGljdGl2ZSUyMEFuYWx5c2lz'); return false;">Predictive Analysis</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TWFjaGluZSUyMExlYXJuaW5n'); return false;">Machine Learning</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>An interactive data visualisation dashboard developed using RShiny, exploring transaction data of a fintech company. Project work for ISSS608 Visual Analytics and…</p>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
