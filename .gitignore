@@ -4,7 +4,6 @@
 .Ruserdata
 
 /.quarto/
-gallery/
 images/
 data/
 .httr-oauth

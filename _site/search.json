@@ -140,6 +140,13 @@
     "text": "Junior data analyst with hands-on experience across the full analytics workflow — from data wrangling and statistical modeling to interactive visualization.\n\nEducation\nSingapore Management University | Singapore | Jan 2025 - July 2026\nMaster of IT in Business - Data Science and Analytics\nDurham University | United Kingdom | Sept 2018 - Jun 2021\nBachelor of Arts in Combined Social Sciences - Specialising in International Relations and Economics\n\n\nExperience\nMinistry of Foreign Affairs - Foreign Service Officer | Jun 2022 - Dec 2024\n\nAnalysed and reported in real time on geopolitical developments of 8 countries in Eastern Europe (2022-2023) and India (2024)\nFacilitated bilateral cooperation between foreign embassies/institutions and local government agencies such as negotiations of Memorandums of Understanding, events planning, and humanitarian donations.\n\n\n\nSkills\nPython   \nR   \nTableau   \nExcel   \nSQL  \nSAS Viya"
   },
   {
+    "objectID": "gallery.html",
+    "href": "gallery.html",
+    "title": "Gallery",
+    "section": "",
+    "text": "Below are examples of my art, personal and/or commissioned!"
+  },
+  {
     "objectID": "project_work/HDBresalePrediction/resaleprediction.html",
     "href": "project_work/HDBresalePrediction/resaleprediction.html",
     "title": "Predicting HDB Resale Prices",
@@ -362,12 +369,5 @@
     "title": "Predicting HDB Resale Prices",
     "section": "9.4 Global Moran’s I test on residuals",
     "text": "9.4 Global Moran’s I test on residuals\nIn this section, we will conduct Global Moran’s I test on the residuals of each model to test for spatial autocorrelation.\nThe following code chunk builds the function to perform the following:\n\nfilters residuals_long for the residuals of the model of interest and selects only the residuals column and the geometry column to create sf object sf\nuse spatial jitterst_jitter()to avoid overlapping points insf`\nconverts sf from an sf object to sp object using as_Spatial()\ndefines neighbour list nb using k-nearest neighbours. The value of k will be dependent on the adaptive bandwidth used for the geographically-weighted version of each model.\ncreates row standardised weights matrix for neighbour list based using nb2listw(style='W')\nreturns the result of global morans test using function moran.test()\n\n\nget_moransI &lt;- function(modelname, k){\n  set.seed(1234)\n  sf &lt;- residuals_long %&gt;%\n    filter(Model==modelname)%&gt;%\n    select(Residuals, geometry)\n  \n  sf &lt;- sf %&gt;%\n    st_jitter(amount=1)\n  \n  residuals &lt;- as.vector(sf$Residuals)\n  sp &lt;- as_Spatial(sf)\n  \n  k_neighbors_obj &lt;- knearneigh(coordinates(sp), k = k, longlat = FALSE)\n  adaptive_nb &lt;- knn2nb(k_neighbors_obj)\n  nb &lt;- dnearneigh(coordinates(sp), 0, 5000, longlat = FALSE)\n  nb_lw &lt;- nb2listw(adaptive_nb, style = 'W')\n  \n  test&lt;-moran.test(residuals, nb_lw)\n  \n  return(test)\n}\n\nThe following code chunk uses the function created above to create get the result of global moran’s I test for each model studied in this exercise, and compiles the results into the interactive datatable below.\n\n\nCode\nmi_mlr&lt;-get_moransI('mlr', bw_adaptive)\nmi_gwr&lt;-get_moransI('gwr', bw_adaptive)\nmi_rf&lt;-get_moransI('rf', 450)\nmi_gwrf &lt;- get_moransI('gwrf',450)\n\nresults_df &lt;- data.frame(\n   Variable = c(\"Multiple Linear Regression\", \"Geographically Weighted Regression\", \"Random Forest\", \"Geographically Weighted Random Forest\"),\n   Moran_I = c(mi_mlr$estimate[1], mi_gwr$estimate[1], mi_rf$estimate[1], mi_gwrf$estimate[1]),\n   P_value = c(mi_mlr$p.value, mi_gwr$p.value, mi_rf$p.value, mi_gwrf$p.value)\n )\n\ndatatable(results_df)%&gt;%\n  formatRound(columns = c('Moran_I'), digits = 3)\n\n\n\n\n\n\nThe p-value for all models is &lt;0.05, indicating that we should reject the null hypothesis that the spatial distribution of residuals is random and conclude that the pattern is statistically significant for all models.\nAfter sorting the results by Morans I value, the multiple linear regression model has the highest value as 0.425. The other three models have Morans I values that are very close, ranging from 0.012 to 0.076. The geographically weighted random forest model has the lowest Moran’s I value. The reduction in Moran’s I values between the non-spatial models and their geographically weighted counterparts highlights the value of using geographically weighted models to address spatial non-stationarity.\nAt the same time, it is interesting to note that even the non-spatial random forest model has a lower Moran’s I value than the geographically weighted regression model.This could suggest that with the current predictive variables which contain geographic information (ie proximity to other amenities), the random forest model was able to implicitly address spatial non-stationarity. However, the poorer RMSE performance by the random forest models would also indicate that perhaps more variables need to be considered by the model to accurately predict the HDB resale price."
-  },
-  {
-    "objectID": "gallery.html",
-    "href": "gallery.html",
-    "title": "Gallery",
-    "section": "",
-    "text": "Below are examples of my art, personal and/or commissioned!"
   }
 ]
