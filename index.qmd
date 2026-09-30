@@ -1,19 +1,28 @@
 ---
-title: "Hi there!"
+title: "Erica Chan | Junior Data Analyst | Portfolio"
+css: "styles.css"
+listing:
+  contents: 
+    - "project_work/*/*.qmd"
+    - title: "Financial Data Dashboard"
+      description: "An interactive data visualisation dashboard developed using RShiny, exploring transaction data of a fintech company"
+      path: "https://chunhanyang.shinyapps.io/colombian-fintech-dashboard/"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIuZKDtopvS9icmU47iZ2M-uu6dR_JH8oTkRrDDauFos2SpSth6_0Y2tM&s=10"
+      categories: [Time-series Analysis, Predictive Analysis, R, Machine Learning]
+  type: grid             
+  categories: true         
 ---
 
 ::::: grid
 ::: g-col-4
-![](images/clipboard-1634880225.jpeg)
+![](gallery/canva.png)
 :::
 
 ::: g-col-8
-I'm Erica, a multidisciplinarian who loves tinkering with all kinds of things - art, data and code. Exploring different fields allows me to bring unique perspectives to problem-solving, combining analytical depth with visual storytelling.
+I'm Erica, a 2026 SMU Masters of IT in Business (Data Science and Analytics) graduate passionate about uncovering and visualising hidden stories hidden in data. Actively seeking data analyst roles to apply my learnings and experience in Python, SQL, R and Tableau.
 
-- Head over to **Projects** to see my data analytics dashboards, coding builds and process.
-
-- **Gallery** includes some of my recent art, either personal or commissioned!
-
-Have a look around, and thank you for visiting!
+See below for examples of my work.
 :::
 :::::
+
+------------------------------------------------------------------------

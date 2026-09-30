@@ -9,8 +9,6 @@ website:
         text: Home
       - href: about.qmd
         text: About me
-      # - blog.qmd
-      - projects.qmd
       - gallery.qmd
     right:
       - icon: envelope-fill

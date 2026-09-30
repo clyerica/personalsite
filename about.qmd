@@ -1,5 +1,5 @@
 ---
-image: images/clipboard-2076039297.jpeg
+image: gallery/pic.jpg
 format: html
 title: Erica Chan
 about: 
@@ -21,7 +21,7 @@ p{
 ```
 
 ::: {#hero-heading}
-*Aspiring data analyst* *with hands-on experience across the full analytics workflow — from data wrangling and statistical modeling to interactive visualization.*
+*Junior data analyst* *with hands-on experience across the full analytics workflow — from data wrangling and statistical modeling to interactive visualization.*
 
 ### Education
 

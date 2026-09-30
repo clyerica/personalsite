@@ -5,6 +5,8 @@ lightbox:
   match: auto
   loop: true
 ---
+Below are examples of my art, personal and/or commissioned!
+
 ::: {layout-ncol=3 layout-valign="center"}
 
 ![](gallery/outfits.png){group="g"}

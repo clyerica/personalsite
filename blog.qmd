@@ -1,9 +1,0 @@
----
-title: "Musings"
-description: "A collection of my short essays and thoughts - Coming soon!"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
----
